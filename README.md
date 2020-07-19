@@ -9,8 +9,8 @@ These jars could be found at following locations:
   2. Vertica JDBC Driver (`/opt/vertica/java/vertica-jdbc-10.0.0-0.jar`)
   
 #### Add Unmanaged Dependencies
-- Copy jars to the `lib` directory under project root
-- Add the following lines in `build.sbt`
+1. Copy jars to the `lib` directory under project root
+2. Add the following lines in `build.sbt`
 ```
 unmanagedJars in Compile ++= Seq(
   baseDirectory.value / "lib/vertica-spark2.1_scala2.11.jar",
