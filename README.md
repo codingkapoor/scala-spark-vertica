@@ -17,3 +17,13 @@ unmanagedJars in Compile ++= Seq(
   baseDirectory.value / "lib/vertica-jdbc-10.0.0-0.jar"
 )
 ```
+
+### Create Data In Vertica
+The app is based on the following data in vertica. Create a `test` table in vertica and add couple of dummy entries as follows:
+```
+=> CREATE TABLE test (a int, b int, c int, d varchar);
+=> INSERT INTO test VALUES (1, 3, 5, 'odds');
+=> INSERT INTO test VALUES (10, 14, 8, 'evens');
+=> INSERT INTO test VALUES (11, 13, 19, 'odds');
+=> COMMIT;
+```
