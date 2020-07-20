@@ -16,11 +16,11 @@ trait Vertica extends Source {
   override def format: String = VERTICA_DATA_SOURCE
 
   override def opts: Map[String, String] = Map(
-    "host" -> Config.verticaHost,
-    "user" -> Config.verticaUser,
-    "password" -> Config.verticaPassword,
-    "db" -> Config.verticaDB,
-    "table" -> Config.verticaTable,
-    "numPartitions" -> Config.verticaPartitions
+    "host" -> AppConfig.verticaHost,
+    "user" -> AppConfig.verticaUser,
+    "password" -> AppConfig.verticaPassword,
+    "db" -> AppConfig.verticaDB,
+    "table" -> AppConfig.verticaTable,
+    "numPartitions" -> AppConfig.verticaPartitions
   )
 }
